@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <link rel="stylesheet" href="app/css/style.css" />
+  </head>
+  <body>
+    <h1>Kha'Zix</h1>
+    <div class="lore-khazix">
+      <img
+        src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg"
+        alt="Kha'Zix"
+      />
+    </div>
+    <p>
+      The Void grows, and the Void adapts—in none of its myriad spawn are these
+      truths more apparent than Kha'Zix. Evolution drives the core of this
+      mutating horror, born to survive and to slay the strong. Where it
+      struggles to do so, it grows new, more effective ways to counter and kill
+      its prey. Initially a mindless beast, Kha'Zix's intelligence has developed
+      as much as its form. Now, the creature plans out its hunts, and even
+      utilizes the visceral terror it engenders in its victims.
+    </p>
+    <h2>Abilities</h2>
+    <div class="btn-container-abilities">
+      <button
+        class="btn-passive"
+        index="0"
+        onclick="displayTab('selected-passive')"
+      ></button>
+      <button
+        class="btn-q"
+        index="1"
+        onclick="displayTab('selected-q')"
+      ></button>
+      <button
+        class="btn-w"
+        index="2"
+        onclick="displayTab('selected-w')"
+      ></button>
+      <button
+        class="btn-e"
+        index="3"
+        onclick="displayTab('selected-e')"
+      ></button>
+      <button
+        class="btn-r"
+        index="4"
+        onclick="displayTab('selected-r')"
+      ></button>
+    </div>
+
+    <div class="tab" id="selected-passive">
+      <h3>PASSIVE: UNSEEN THREAT</h3>
+      <p>
+        Nearby enemies that are Isolated from their allies are marked. Kha'Zix's
+        abilities have interactions with Isolated targets. When Kha'Zix is not
+        visible to the enemy team, he gains Unseen Threat, causing his next
+        basic attack against an enemy champion to deal bonus magic damage and
+        slow them for a few seconds.
+      </p>
+      <div class="passive-video">
+        <video
+          width="320"
+          height="240"
+          controls
+          autoplay
+          muted
+          src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_P1.webm"
+        ></video>
+      </div>
+    </div>
+    <div class="tab" id="selected-q">
+      <h3>Q: TASTE THEIR FEAR</h3>
+      <p>
+        Deals physical damage to the target. Damage increased on Isolated
+        targets. If he chooses to Evolve Reaper Claws, this refunds a percent of
+        it's cooldown against Isolated targets. Kha'Zix also gains increased
+        range on his basic attacks and Taste Their Fear.
+      </p>
+      <div class="q-video">
+        <video
+          width="320"
+          height="240"
+          controls
+          autoplay
+          muted
+          src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_Q1.webm"
+        ></video>
+      </div>
+    </div>
+    <div class="tab" id="selected-w">
+      <h3>W: VOID SPIKE</h3>
+      <p>
+        Kha'Zix fires exploding spikes that deal physical damage to enemies hit.
+        Kha'Zix is healed if he is also within the explosion radius. If he
+        chooses to Evolve Spike Racks, Void Spike now fires three spikes in a
+        cone, slow enemies hit, and reveals enemy champions hit for 2 seconds.
+        Isolated targets are slowed for extra.
+      </p>
+      <div class="w-video">
+        <video
+          width="320"
+          height="240"
+          controls
+          autoplay
+          muted
+          src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_W1.webm"
+        ></video>
+      </div>
+    </div>
+    <div class="tab" id="selected-e">
+      <h3>E: LEAP</h3>
+      <p>
+        Kha'Zix leaps to an area, dealing physical damage upon landing. If he
+        chooses to Evolve Wings, Leap's range increases by 200 and the cooldown
+        resets on champion kill or assist.
+      </p>
+      <div class="e-video">
+        <video
+          width="320"
+          height="240"
+          controls
+          autoplay
+          muted
+          src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_E1.webm"
+        ></video>
+      </div>
+    </div>
+    <div class="tab" id="selected-r">
+      <h3>R: VOID ASSAULT</h3>
+      <p>
+        Each rank allows Kha'Zix to evolve one of his abilities, giving it a
+        unique additional effect. When activated, Kha'Zix becomes Invisible,
+        triggering Unseen Threat and increasing Move Speed. If he chooses to
+        Evolve Adaptive Cloaking, Void Assault gains increased Invisibility
+        duration, and an additional use.
+      </p>
+      <div class="r-video">
+        <video
+          width="320"
+          height="240"
+          controls
+          autoplay
+          muted
+          src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0121/ability_0121_R1.webm"
+        ></video>
+      </div>
+    </div>
+
+    <script>
+      var tabs = document.getElementsByClassName("tab");
+      for (var tab of tabs) {
+        tab.style.display = "none";
+      }
+      function displayTab(id) {
+        for (var tab of tabs) {
+          tab.style.display = "none";
+        }
+        document.getElementById(id).style.display = "block";
+      }
+
+      var buttons = document.querySelectorAll("button");
+      for (var button of buttons) {
+        button.addEventListener("click", function () {
+          for (var button of buttons) {
+            button.classList.remove("clicked");
+          }
+
+          this.classList.add("clicked");
+        });
+      }
+    </script>
+  </body>
+</html>

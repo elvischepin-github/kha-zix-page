@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: vollkorn sc;
+}
+
+body {
+    background: rgb(90, 172, 95);
+    background: radial-gradient(circle, rgba(90, 172, 95, 1) 0%, rgba(91, 38, 120, 1) 50%, rgba(37, 70, 98, 1) 100%);
+    background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+    margin: 20px;
+}
+
+div.lore-khazix {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    filter: grayscale(100);
+    transition: 0.5s;
+}
+
+img:hover {
+    filter: grayscale(0);
+    box-shadow: 0 0 25px rgb(90, 172, 95);
+}
+
+div.btn-container-abilities {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+button {
+    margin: 20px;
+    filter: grayscale(100);
+    transition: 0.5s;
+    position: relative;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    background-image: url("https://www.meme-arsenal.com/memes/d574825bc290c5f8cc1d0e2a84252826.jpg");
+    border-radius: 20px;
+    top: -2px;
+    left: -2px;
+    width: 68px;
+    height: 68px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s cubic-bezier(0.87, 0, 0.13, 0.5);
+}
+
+button:hover::before {
+    transform: translateY(-70px);
+    box-shadow: 0 0 25px rgba(90, 172, 95, 1);
+}
+
+button:hover {
+    filter: grayscale(0);
+    box-shadow: 0 0 15px;
+}
+
+button.clicked {
+    box-shadow: 0 0 25px #c99c44;
+    filter: grayscale(0);
+}
+
+.btn-passive,
+.btn-q,
+.btn-w,
+.btn-e,
+.btn-r {
+    background-position: center;
+    width: 68px;
+    height: 68px;
+    box-shadow: 0 0 5px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-passive {
+    background-image: url("https://www.mobafire.com/images/ability/khazix-unseen-threat.png");
+}
+.btn-q {
+    background-image: url("https://www.mobafire.com/images/ability/khazix-taste-their-fear.png");
+}
+.btn-w {
+    background-image: url("https://www.mobafire.com/images/ability/khazix-void-spike.png");
+}
+.btn-e {
+    background-image: url("https://www.mobafire.com/images/ability/khazix-leap.png");
+}
+.btn-r {
+    background-image: url("https://www.mobafire.com/images/ability/khazix-void-assault.png");
+}
+
+video {
+    box-shadow: 0 0 10px;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.passive-video,
+.q-video,
+.w-video,
+.e-video,
+.r-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
